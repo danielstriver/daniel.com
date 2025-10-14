@@ -1,124 +1,149 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  color: #333;
+    background-color: black; /*W*hat do you suggest about setting the body bg color to black, is this a common thing? or devs leave it white*/
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
-  background: #111;  
-  color: white;
-  padding: 1rem 0;
+    background: #333;
 }
 
 header .container {
-  width: 90%; /*need understanding*/
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 90%;
+    max-width: 1100px; /*fixing width not to over stretch on the big screens*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 auto;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: animate 6s linear infinite;
 }
 
 .logo span {
-  color: #00bcd4;
+    color: aqua;
 }
 
 nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
 }
 
 nav a:hover {
-  color: #00bcd4;
+    color: aqua;
+    animation: animate 3s linear infinite;
 }
 
-/* Hero Section */
+/* Animation for nav hover*/
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0);
+    }
+
+    100% { 
+        filter: hue-rotate(720deg);
+    }
+}
 
 .hero {
-  height: 90vh; /*need understanding*/
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("coding-image.jpg") center/cover no-repeat; /*need understanding*/
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 1rem;
+    height: 90vh;
+    /* Setting the fall back color and adding the bg image */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("coding-image.jpg") center/cover no-repeat;
+    /* See this flexbox thing below, why does it work for the section class hero and not in the hero-text class in the div - I tried there, couldn't work and worked for the section class, why is that?*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero-text span {
-  color: #00bcd4;
-  font-weight: bold;
+    color: aqua;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .btn {
-  display: inline-block; /*need understanding*/
-  margin-top: 1rem;
-  background: #00bcd4;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #333;
+    background-color: aqua;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background: #008fa1;
+    background-color: rgb(32, 138, 138);
+    animation: animate 2s linear infinite;
 }
 
 .projects {
-  padding: 4rem 1rem;
-  text-align: center;
+    margin: 4rem 6rem;
 }
 
 .projects h2 {
-  margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.projects-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1100px; /*need understanding*/
-  margin: 0 auto;
+.projects .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .project {
-  background-color: #eee;
-  padding: 2rem;
-  border-radius: 10px;
-  font-weight: bold;
+    background: rgb(50, 124, 124);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    background: rgb(6, 70, 70);
+    transform: translateY(-5px);
+    animation: animate 3s linear infinite;
 }
 
 footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 1.2rem 0;
-  font-size: 0.9rem;
+    background: #333;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
