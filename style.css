@@ -14,6 +14,8 @@ header {
     background: #333;
     /* box-shadow: 0 0 15px lightskyblue; */
     /* In the line above, you can tell I wanted to add a box shadow to the header but couldn't work, FYI, trying the display to inline-block, well worked but messed my heady layout, couldn't reache the right end, can we figure that out?*/
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+
 }
 
 header .container {
@@ -164,4 +166,49 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
+}
+
+/* Contact form - CSS */
+.contact {
+    padding: 4rem 2rem;
+    background: #111;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: aqua;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form button {
+    background: aqua;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background: rgb(32, 138, 138);
 }
