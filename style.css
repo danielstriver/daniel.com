@@ -149,7 +149,7 @@ footer {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 620px) {
+@media (max-width: 525px) {
     .hero-text h2 {
         font-size: 1.8rem;
     }
