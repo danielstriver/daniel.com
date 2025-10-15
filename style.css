@@ -12,6 +12,8 @@ body {
 
 header {
     background: #333;
+    /* box-shadow: 0 0 15px lightskyblue; */
+    /* In the line above, you can tell I wanted to add a box shadow to the header but couldn't work, FYI, trying the display to inline-block, well worked but messed my heady layout, couldn't reache the right end, can we figure that out?*/
 }
 
 header .container {
